@@ -559,4 +559,40 @@ a{
   text-decoration: none;
 }
 
+/* ===== RANK BADGE SOLO SEZIONE CLASSIFICHE (#work) ===== */
+#work .work__img{
+  position: relative;            /* serve per posizionare il badge */
+  display: block;
+  overflow: hidden;
+
+  /* cornice */
+  border: 4px solid rgba(0,0,0,0.18);
+  border-radius: .5rem;          /* mantiene il tuo stile */
+}
+
+#work .work__img::after{
+  content: attr(data-rank);      /* prende il numero da data-rank */
+  position: absolute;
+  top: 10px;
+  left: 10px;
+
+  min-width: 38px;
+  height: 38px;
+  padding: 0 10px;               /* per numeri tipo 15/50 */
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-weight: 700;
+  font-size: 15px;
+  color: #fff;
+  background: rgba(0,0,0,0.78);
+
+  border: 2px solid rgba(255,255,255,0.9);
+  border-radius: 999px;
+
+  box-shadow: 0px 6px 16px rgba(0,0,0,0.25);
+  z-index: 2;
+}
 
